@@ -1,4 +1,6 @@
 import BDD.ConnexionUnique;
+import BDD.DAO.DAOPatient;
+import BDD.object.Patient;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -6,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -22,14 +25,8 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         //launch(args);
-        try {
-            Connection conn = ConnexionUnique.getInstance().getConnection();
-            Statement s = conn.createStatement();
-            String req = "INSERT INTO Facture (Montant) VALUES (10);";
-            s.execute(req);
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+        Patient p = new Patient("nom", "prenom", new Date(System.currentTimeMillis()), "M", "00251525", "3285 che", "85851485", "cest_quoi", "faignant");
+        DAOPatient daoPatient = new DAOPatient();
+        daoPatient.insertPatient(p);
     }
 }

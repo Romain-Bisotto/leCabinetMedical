@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class ConnexionUnique
 {
     // Chaine de connexion
-    private static final String CONNECT_URL = "jdbc:sqlite:C:\\Users\\Romain\\Desktop\\leCabinetMedical\\baseDeDonné.db";
+    private static final String CONNECT_URL = "jdbc:sqlite:/home/maxime/IdeaProjects/leCabinetMedical/baseDeDonné.db";
     private static ConnexionUnique instance = null;
     private Connection connection;
 
