@@ -1,0 +1,35 @@
+import BDD.ConnexionUnique;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("gui/fxml/sample.fxml"));
+        //primaryStage.setTitle("");
+        primaryStage.setScene(new Scene(root, 900, 600));
+        primaryStage.show();
+    }
+
+
+    public static void main(String[] args) {
+        //launch(args);
+        try {
+            Connection conn = ConnexionUnique.getInstance().getConnection();
+            Statement s = conn.createStatement();
+            String req = "INSERT INTO Facture (Montant) VALUES (10);";
+            s.execute(req);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+}

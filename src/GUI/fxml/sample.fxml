@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: skyblue; -fx-border-color: black;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controler.Controller">
+   <children>
+      <Button fx:id="buttonComptabilite" layoutX="108.0" layoutY="272.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="233.0" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;" text="Comptabilité">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="buttonAgenda" layoutX="108.0" layoutY="413.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="233.0" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;" text="Agenda">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="buttonFichePatient" layoutX="546.0" layoutY="272.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="233.0" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;" text="Patient">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="buttonDossierMédical" layoutX="546.0" layoutY="413.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="233.0" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;" text="Dossier Médical">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="282.0" layoutY="98.0" prefHeight="84.0" prefWidth="335.0" text="Le Cabinet Médical" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
