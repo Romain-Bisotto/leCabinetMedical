@@ -1,34 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: skyblue; -fx-border-color: black;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controler.AgendaControl">
    <children>
-       <Button fx:id="buttonRetour" layoutX="790.0" layoutY="549.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="retour ↵">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></Button>
-       <Button fx:id="buttonAddRdv" layoutX="50.0" layoutY="540.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-border-color: black; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="➕">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></Button>
-       <TableView fx:id="profilsListe" centerShape="false" layoutX="50.0" layoutY="89.0" prefHeight="435.0" prefWidth="798.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: black;">
+       <TableView fx:id="rdvListView" centerShape="false" layoutX="50.0" layoutY="89.0" prefHeight="435.0" prefWidth="798.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: black;">
            <columns>
-               <TableColumn fx:id="supp" editable="false" prefWidth="30.0" text="Date">
+               <TableColumn editable="false" prefWidth="30.0" text="Date">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="date" />
+                   </cellValueFactory>
+               </TableColumn>
+               <TableColumn editable="false" prefWidth="30.0" text="Heure">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="heure" />
+                   </cellValueFactory>
                </TableColumn>
                <TableColumn editable="false" prefWidth="70.0" text="Numéro du Patient">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="numPatient" />
+                   </cellValueFactory>
                </TableColumn>
                <TableColumn editable="false" prefWidth="70.0" text="Motif">
-               </TableColumn>
-               <TableColumn editable="false" prefWidth="200.0" text="Suprimer">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="motif" />
+                   </cellValueFactory>
                </TableColumn>
            </columns>
            <columnResizePolicy>
                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
            </columnResizePolicy>
        </TableView>
+       <Button fx:id="buttonAddRdv" layoutX="50.0" layoutY="540.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-border-color: black; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="➕">
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor></Button>
+       <Button fx:id="buttonRetour" layoutX="790.0" layoutY="549.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="retour ↵">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
        <Label alignment="CENTER" layoutX="334.0" layoutY="14.0" prefHeight="53.0" prefWidth="233.0" text="Agenda" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="36.0" />

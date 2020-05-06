@@ -5,7 +5,7 @@ import java.sql.Date;
 public class Patient {
     private String nom;
     private String prenom;
-    private Date Naissance;
+    private Date naissance;
     private String sexe;
     private String tel;
     private String adresse;
@@ -18,13 +18,39 @@ public class Patient {
         this.numPatient = 0;
         this.nom = nom;
         this.prenom = prenom;
-        Naissance = naissance;
+        this.naissance = naissance;
         this.sexe = sexe;
         this.tel = tel;
         this.adresse = adresse;
         this.numSecu = numSecu;
         this.valide = valide;
         this.profession = profession;
+    }
+
+    public Patient(String nom, String prenom, Date naissance, String sexe, String tel, String adresse, String numSecu, String valide, String profession, int numPatient) {
+        this.numPatient = numPatient;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.naissance = naissance;
+        this.sexe = sexe;
+        this.tel = tel;
+        this.adresse = adresse;
+        this.numSecu = numSecu;
+        this.valide = valide;
+        this.profession = profession;
+    }
+
+    public Patient(String nom, String prenom, int numPatient) {
+        this.numPatient = numPatient;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.naissance = null;
+        this.sexe = null;
+        this.tel = null;
+        this.adresse = null;
+        this.numSecu = null;
+        this.valide = null;
+        this.profession = null;
     }
 
     public String getNom() {
@@ -52,11 +78,11 @@ public class Patient {
     }
 
     public Date getNaissance() {
-        return Naissance;
+        return naissance;
     }
 
     public void setNaissance(Date naissance) {
-        Naissance = naissance;
+        naissance = naissance;
     }
 
     public String getSexe() {
@@ -97,5 +123,13 @@ public class Patient {
 
     public void setValide(String valide) {
         this.valide = valide;
+    }
+
+    public int getNumPatient() {
+        return numPatient;
+    }
+
+    public void setNumPatient(int numPatient) {
+        this.numPatient = numPatient;
     }
 }

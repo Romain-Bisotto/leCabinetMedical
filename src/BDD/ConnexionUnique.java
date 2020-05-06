@@ -4,13 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * Created by b16001015 on 25/09/17.
- */
 public class ConnexionUnique
 {
-    // Chaine de connexion
-    private static final String CONNECT_URL = "jdbc:sqlite:/home/maxime/IdeaProjects/leCabinetMedical/baseDeDonné.db";
+    // Chaine de connexion     jdbc:sqlite:./BDD/biblio.db     "jdbc:sqlite:C:\\Users\\Romain\\Desktop\\leCabinetMedical\\baseDeDonne.db";
+    private static final String CONNECT_URL = "jdbc:sqlite:./baseDeDonne.db";
     private static ConnexionUnique instance = null;
     private Connection connection;
 

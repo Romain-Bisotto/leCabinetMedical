@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: skyblue; -fx-border-color: black;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controler.AddCertiControl">
+    <children>
+        <Label alignment="CENTER" layoutX="224.0" layoutY="14.0" prefHeight="121.0" prefWidth="418.0" text="Créer un Certificat">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font></Label>
+        <ComboBox fx:id="comboCerti" layoutX="29.0" layoutY="207.0" prefHeight="51.0" prefWidth="211.0" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ComboBox>
+        <TextField fx:id="fieldApte" layoutX="59.0" layoutY="300.0" promptText="Fonction" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" visible="false" />
+        <ComboBox fx:id="comboApte" layoutX="55.0" layoutY="377.0" prefHeight="40.0" prefWidth="159.0" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;" visible="false">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ComboBox>
+        <Button fx:id="buttonValide" layoutX="416.0" layoutY="530.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="34.0" style="-fx-border-color: black; -fx-background-radius: 10px; -fx-border-radius: 10;" text="✔" textFill="#03a110">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+
+    <Button fx:id="buttonRetour" layoutX="826.0" layoutY="552.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="retour ↵">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor></Button>
+      <TextField fx:id="fieldRepos" layoutX="60.0" layoutY="315.0" promptText="Nombre de jour" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black;" visible="false" />
+      <DatePicker fx:id="dateDisD" layoutX="56.0" layoutY="287.0" prefHeight="27.0" prefWidth="159.0" style="-fx-border-color: black;" visible="false" />
+      <DatePicker fx:id="dateDisF" layoutX="56.0" layoutY="342.0" prefHeight="27.0" prefWidth="159.0" style="-fx-border-color: black;" visible="false" />
+      <Pane fx:id="paneCerti" layoutX="376.0" layoutY="129.0" prefHeight="369.0" prefWidth="385.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: white; -fx-background-radius: 10;" visible="false">
+         <children>
+            <Label fx:id="nomCerti" layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="211.0" text="Nom et Prenom">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="textCerti" alignment="CENTER" layoutY="224.0" prefHeight="51.0" prefWidth="385.0" text="Texte">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="naissanceCerti" layoutX="14.0" layoutY="62.0" prefHeight="27.0" prefWidth="129.0" text="Né le ">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label fx:id="CINCerti" layoutX="14.0" layoutY="104.0" prefHeight="27.0" prefWidth="138.0" text="CIN :">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+         </children>
+      </Pane>
+    </children>
+</Pane>

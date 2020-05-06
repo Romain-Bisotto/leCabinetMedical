@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: skyblue; -fx-border-color: black;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controler.AddPatientControl">
+    <children>
+        <Label alignment="CENTER" layoutX="224.0" layoutY="5.0" prefHeight="121.0" prefWidth="418.0" text="Ajouter un patient">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font></Label>
+        <TextField fx:id="fieldNom" layoutX="170.0" layoutY="126.0" prefHeight="51.0" prefWidth="211.0" promptText="Nom*" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+        <cursor>
+            <Cursor fx:constant="TEXT" />
+        </cursor></TextField>
+        <TextField fx:id="fieldPrenom" layoutX="493.0" layoutY="126.0" prefHeight="51.0" prefWidth="211.0" promptText="Prenom*" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+        <cursor>
+            <Cursor fx:constant="TEXT" />
+        </cursor></TextField>
+        <TextField fx:id="fieldSexe" layoutX="170.0" layoutY="210.0" prefHeight="51.0" prefWidth="211.0" promptText="Sexe" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor></TextField>
+      <DatePicker fx:id="dateNaissance" layoutX="493.0" layoutY="210.0" prefHeight="51.0" prefWidth="211.0" promptText="Date de naissance*" style="-fx-background-radius: 22px; -fx-border-radius: 22px; -fx-border-color: black;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+        <TextField fx:id="fieldTel" layoutX="170.0" layoutY="292.0" prefHeight="51.0" prefWidth="211.0" promptText="Tel" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor></TextField>
+        <TextField fx:id="fieldAdresse" layoutX="493.0" layoutY="292.0" prefHeight="51.0" prefWidth="211.0" promptText="Adresse" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor></TextField>
+        <TextField fx:id="fieldNumSecu" layoutX="170.0" layoutY="374.0" prefHeight="51.0" prefWidth="211.0" promptText="Numéro de sécurité" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor></TextField>
+        <TextField fx:id="fieldProfession" layoutX="493.0" layoutY="374.0" prefHeight="51.0" prefWidth="211.0" promptText="Profession" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor></TextField>
+        <TextField fx:id="fieldValide" layoutX="328.0" layoutY="456.0" prefHeight="51.0" prefWidth="211.0" promptText="Valide" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor></TextField>
+        <Button fx:id="buttonValide" layoutX="416.0" layoutY="530.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="34.0" style="-fx-border-color: black; -fx-background-radius: 10px; -fx-border-radius: 10;" text="✔" textFill="#03a110">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Button fx:id="buttonRetour" layoutX="792.0" layoutY="543.0" mnemonicParsing="false" style="-fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="retour ↵">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+      <Label fx:id="echec" alignment="CENTER" layoutX="392.0" layoutY="75.0" prefHeight="51.0" prefWidth="83.0" text="Echec" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>

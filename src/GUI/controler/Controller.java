@@ -15,10 +15,10 @@ public class Controller {
     private Button buttonAgenda;
 
     @FXML
-    private Button buttonDossierMédical;
+    private Button buttonDossierMedical;
 
     @FXML
-    private Button buttonFichePatient;
+    private Button buttonPatient;
 
     @FXML
     private void initialize() {
@@ -27,6 +27,12 @@ public class Controller {
         } );
         buttonAgenda.setOnAction( (event) -> {
             Tools.loadWindow("Agenda", (Stage) ( (Node) event.getSource()).getScene().getWindow(), 900, 600);
+        } );
+        buttonPatient.setOnAction( (event) -> {
+            Tools.loadWindow("Patient", (Stage) ( (Node) event.getSource()).getScene().getWindow(), 900, 600);
+        } );
+        buttonDossierMedical.setOnAction( (event) -> {
+            Tools.loadWindow("DossierMedical", (Stage) ( (Node) event.getSource()).getScene().getWindow(), 900, 600);
         } );
     }
 }

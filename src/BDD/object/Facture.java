@@ -10,13 +10,13 @@ public class Facture {
     private  String justificatif;
     private Date date;
 
-    public Facture(String t, String a, double m, String d, String p, Date date){
+    public Facture(String t, String a, String d, double m, Date date, String p){
         this.type = t ;
         this.action = a;
-        this.montant = m;
-        this.justificatif = p;
         this.detail = d;
+        this.montant = m;
         this.date = date;
+        this.justificatif = p;
     }
 
     public Date getDate() {
@@ -34,7 +34,7 @@ public class Facture {
     public String getType() {
         return type;
     }
-    public String getPath() {
+    public String getJustificatif() {
         return justificatif;
     }
 
@@ -54,7 +54,7 @@ public class Facture {
         this.detail = detail;
     }
 
-    public void setPath(String path) {
+    public void setJustificatif(String path) {
         this.justificatif = path;
     }
 

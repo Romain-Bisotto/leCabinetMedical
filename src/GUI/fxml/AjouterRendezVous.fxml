@@ -1,35 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
 <?import javafx.scene.*?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
 <Pane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: skyblue; -fx-border-color: black;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controler.AddRdvControl">
     <children>
         <Label alignment="CENTER" layoutX="224.0" layoutY="14.0" prefHeight="121.0" prefWidth="418.0" text="Ajouter un rendez-vous">
          <font>
             <Font name="System Bold" size="36.0" />
          </font></Label>
-        <TextField layoutX="328.0" layoutY="394.0" prefHeight="51.0" prefWidth="211.0" promptText="Motif" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+      <DatePicker fx:id="date" layoutX="328.0" layoutY="165.0" prefHeight="51.0" prefWidth="211.0" promptText="Date" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;" />
+      <ComboBox fx:id="comboHeure" layoutX="328.0" layoutY="249.0" prefHeight="51.0" prefWidth="211.0" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+        <TextField fx:id="fieldNumPatient" layoutX="328.0" layoutY="332.0" prefHeight="51.0" prefWidth="211.0" promptText="Numéro du patient" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor></TextField>
-        <TextField layoutX="328.0" layoutY="265.0" prefHeight="51.0" prefWidth="211.0" promptText="Numéro du patient" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
+        <TextField fx:id="fieldMotif" layoutX="328.0" layoutY="425.0" prefHeight="51.0" prefWidth="211.0" promptText="Motif" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor></TextField>
-        <TextField layoutX="328.0" layoutY="143.0" prefHeight="51.0" prefWidth="211.0" promptText="Date" style="-fx-border-color: black; -fx-background-radius: 22px; -fx-border-radius: 22px;">
-            <cursor>
-                <Cursor fx:constant="TEXT" />
-            </cursor></TextField>
-        <Button fx:id="buttonRetour" layoutX="792.0" layoutY="543.0" mnemonicParsing="false" style="-fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="retour ↵">
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor></Button>
         <Button fx:id="buttonValide" layoutX="416.0" layoutY="530.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="34.0" style="-fx-border-color: black; -fx-background-radius: 10px; -fx-border-radius: 10;" text="✔" textFill="#03a110">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor></Button>
+        <Button fx:id="buttonRetour" layoutX="792.0" layoutY="543.0" mnemonicParsing="false" style="-fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="retour ↵">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+      <Label fx:id="free" alignment="CENTER" layoutX="330.0" layoutY="96.0" prefHeight="51.0" prefWidth="211.0" text="Horaire non disponible" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="valide" alignment="CENTER" layoutX="321.0" layoutY="96.0" prefHeight="51.0" prefWidth="225.0" text="Rendez-vous ajouté" textFill="#00c800" visible="false">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="noNumPat" alignment="CENTER" layoutX="328.0" layoutY="96.0" prefHeight="51.0" prefWidth="211.0" text="Patient inexistant" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
     </children>
-
 </Pane>
